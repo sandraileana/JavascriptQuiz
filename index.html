@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link to stylesheet file -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- Title of the webpage -->
+    <title>JavaScript Challenge</title>
+</head>
+
+<body>
+    <!-- Defines the Header options -->
+    <header>
+        <div class="Highscores">View Highscores</div>
+        <div class="Timer">Time: 75</div>
+    </header>
+
+    <!-- Defines the Coding Quiz Container-->
+    <div class="container" id="Coding-Quiz">
+
+        <!-- Defining First Row-->
+        <div class="row">
+
+            <!-- Defines first column with card containg quiz information -->
+            <div class="col-lg-12">
+
+                <!-- Card with start button-->
+                <div class="card" style="width:100%">
+                    <div class="bodycard">
+                        <h1 class="card-title">Coding Quiz Challenge</h1>
+                        <hr id="correct" />
+                        <p class="card-text">
+                            Please answer the 5 code-related challenge questions within the time limit.
+                            <br>
+                            Click the start button to begin the Quiz Challenge.
+                            <br>
+                            Total time to complete de assessment is 75 seconds.
+                            <br>
+                            Incorrect answers will penalize your score and will reduce your time by 10 seconds!
+                            <br>
+                            <br>
+                            <strong>Have a fun time!</strong>
+                            <br>
+                        </p>
+                        <hr id="correct" />
+                    </div>
+                    <div>
+                        <div>
+                            <button type="button" class="purple-button" id="start">
+                                Start Quiz
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Defines second column the row-->
+            <div class="col-lg-12" id="Remove-Padding">
+                <br>
+
+                <!-- Displays the current question -->
+                <div class="question-display"></div>
+                <br>
+
+                <!-- Displays the button array -->
+                <ul id="button-display"></ul>
+
+                <!-- Displays if user's answer is correct or incorrect -->
+                <div class="response">
+                    <div class="time-out"></div>
+                </div>
+
+                <!-- Displays the last page with scores, asks for initials to record high scores -->
+                <div class="last-page" style="display: none">
+                    <div id="message"></div>
+                    <div id="score"></div>
+                    <br>
+                    <div id="initials">
+                        <form>
+                            Enter initials: <input type="text" placeholder="Enter your initials here" id="user-input"
+                                name="initials">
+                            <input type="button" id="send-initials" style="color:gold;" value="Submit">
+                        </form>
+                    </div>
+                </div>
+
+
+                <div class="highscoreReport" style="display: none;">
+                    <h1 id="highscoreTitle">Highscores</h1>
+                    <hr id="correct" />
+                    <ul id="highscoreArray"></ul>
+
+                    <!-- Eventlist of highscores -->
+                    <div>
+                        <button type="button" id="return">Back</button>
+                        <button type="button" id="clear">Clear Highscores</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to the source for correct answer audio -->
+    <audio id="correct">
+        <source src="./assets/media/correct-choice.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Link to the source for incorrect answer audio -->
+    <audio id="incorrect">
+        <source src="./assets/media/wrong-answer.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Link to the source for timeout audio -->
+    <audo id="timeout">
+        <source src="./assets/media/game-over.mp3" type="audio/mpeg">
+    </audo>
+
+    <!-- Link to the jQuery Library -->
+    <!--<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Link to javascript file -->
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

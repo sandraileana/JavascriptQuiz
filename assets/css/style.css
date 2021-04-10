@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+    padding: 10;
+    margin: 10;
+}
+
+body {
+    background-color: #d9dcd6;
+}
+
+header {
+    width:100%;
+    height: fit-content;
+    padding: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #1b4255;
+    color: #ffffff;
+}
+
+.Highscores {
+    text-align: left;
+    float: left;
+    align-content: left;
+    padding: 10px;
+}
+
+.Timer{
+    text-align: right;
+    float: inline-end;
+    align-content: right;
+    padding: 10px;
+}
+
+.container {
+    background-color: white;
+    padding: 50px;
+}
+
+.card {
+    margin-top: 7%;
+    text-align: center;
+    border: none;
+}
+
+.card-title {
+    margin-bottom: 10px;
+}
+
+.purple-button{
+    justify-content: center;
+    margin: 10px;
+}
+
+.question-display {
+    color: black;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+#button-display{
+    width: 100%;
+    padding-left: 0px;
+}
+
+.display-4{
+   font-weight: bolder;
+   color: whitesmoke; 
+}
+
+#clear, #return, #start, #tryagain, .answerbutton {
+    background: rgb(120, 0, 189);
+    color: whitesmoke;
+    border-radius: 5px;
+    width: auto;
+    text-align: center;
+    margin: 10px;
+    padding: 10px; 
+}
+
+.response{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#correct {
+    border: 3px thick rgb(152, 245, 13);
+}
+
+#incorrect {
+    border: 3px thick darkred;
+}
+
+form {
+    display: flex;
+}
+
+input {
+   margin-left: 10px; 
+}
+
+#userInput{
+    border: 1.5px double lightslategray;
+}
+
+#send-initials{
+    display: inline;
+    background:rgb(120, 0, 189);
+    color: black;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.answerButton:hover{
+    opacity: 0.5;
+}
+
+#message {
+    width: 100%;
+}
+
+#highscoreTitle {
+    font-weight: bolder;
+}
+
+#highscoreArray{
+    padding: 3px 1px 1px 1px;
+}
+
+#highscoreArray li{
+    width: 100%;
+    border: 1.5px dotted lightskyblue;
+    background: plum;
+    margin: 10px 2px 2px 2px;
+    padding: 2px 2px 2px, 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black !important;
+}
+
+#highscoreArray li:hover{
+    opacity: 0.6;
+}
+
+@media only screen and (max-width: 768px){
+    #button-display{
+        width: 75%;
+    }
+}
