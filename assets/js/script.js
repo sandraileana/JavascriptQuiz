@@ -135,7 +135,7 @@ var quizQuestion = {
         quizQuestion.counter--;
         $(".Timer").html("Time: " + quizQuestion.counter);
         if (quizQuestion.counter <= 0) {
-            $("#timeout")[0].play();
+            //$("#timeout")[0].play();
             quizQuestion.counter = 0;
             clearInterval(quizQuestion.countDownTimer);
             quizQuestion.lastPage();
@@ -176,14 +176,15 @@ var quizQuestion = {
         
         if (selectedAnswer === this.questions[this.questionNumber].answer){
             console.log("correct");
-            $("#correct")[0].play();
+            //$("#correct")[0].play();
             this.correctAnswers++;
             console.log(this.correctAnswers);
             $(".response").html("<hr id='correct'/>Correct!");
             this.questionNumber++;
         }
         else {
-            ("#incorrect")[0].play;
+            // $("#incorrect")[0].play;
+            console.log("incorrect");
             this.incorrectAnswers++;
             console.log(this.incorrectAnswers);
             quizQuestion.counter = quizQuestion.counter - 10;
@@ -218,8 +219,8 @@ var quizQuestion = {
         $("last-page").show();
         $("#message").html("<h2>You are done</h2><p>Your results are:</p>");
         $("#score").html("Your final score is: " + quizQuestion.counter);
-        //$("#totalcorrect").html("Correct Answers: " + this.correctAnswers);
-        //$("#totalincorrect").html("Incorrect Answers: " + this.incorrectAnswers);
+        $("#right").html("Correct Answers: " + this.correctAnswers);
+        $("#wrong").html("Incorrect Answers: " + this.incorrectAnswers);
         clearInterval(quizQuestion.countDownTimer);
     },
 
@@ -252,19 +253,19 @@ var quizQuestion = {
         console.log(HighscoreArray);
 
         HighscoreArray.push(finalscore);
-        console.log(highScoreArray);
+        console.log(HighscoreArray);
 
-        highScoreArray.sort((a,b) => b.score - a.score);
-        console.log(highScoreArray);
+        HighscoreArray.sort((a,b) => b.score - a.score);
+        console.log(HighscoreArray);
 
         HighscoreArray.splice(5);
 
         localStorage.setItem('highscoreArray', JSON.stringify(HighscoreArray));
-        console.log(highScoreArray);
+        console.log(HighscoreArray);
         
         const highestscorelist = document.getElementById("#HighscoreArray");
         const Highscores = JSON.parse(localStorage.getItem("highscoreArray")) || [];
-            highScoreArray.map(finalscore => {
+            HighscoreArray.map(finalscore => {
                 if(finalscore.score !=0){
                     console.log(finalscore.initials + " ---- " + finalscore.score);
                     $("#highscoreArray").append('<li>' + finalscore.initials + " ---- " + finalscore.score + '</li>');
